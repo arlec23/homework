@@ -1,0 +1,66 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+namespace CSharp_Shell
+{
+    public static class Program 
+    {
+        public static void Main() 
+        {
+           Console.WriteLine("   Задача 1");
+           double a1, b1;
+           a1 = 16.8;
+           b1 = 12.4;
+           double c1 = Math.Sqrt (a1*b1);
+           Console.WriteLine($"Квадратный корень равен: {c1}");
+           
+           Console.WriteLine("\n");
+           Console.WriteLine("   Задача 2");
+           double a, b, c, bc, ac,d;
+           a = 1.4;
+           b = 5.5; // |-5.5|=5.5 (по модулю)
+           c = 0.6;
+           ac = a-c;
+           bc = b+c;
+           d = ac+bc;
+           Console.WriteLine($"Отрезок АС равен {ac}.");
+           Console.WriteLine($"Отвезок ВС равен {bc}.");
+           Console.WriteLine($"Сумма отрезков АС и ВС равна {d}.");
+          
+           Console.WriteLine("\n");
+           Console.WriteLine ("   Задача 3");
+           double x1, x2, y1, y2, xy;
+           x1 = -6.2;
+           y1 = 5.2;
+           x2 = 2.1;
+           y2 = 9.8;
+           xy = Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2));
+           Console.WriteLine ($"Расстояние между точками {xy}");
+           
+            Console.WriteLine("\n");
+           Console.WriteLine("   Задача 4");
+           int a2 = 41, b2, c2; //исходное число
+           b2 = a2/10; //десятки
+           c2 = a2%10; //единицы
+           Console.Write(c2);
+           Console.Write(b2);
+           
+           Console.WriteLine("\n");
+           Console.WriteLine("   Задача 5");
+           int N = 10985; //секунд всего
+           int t = 60; //секунд в минуте и минут в часах
+           int n = N/t;//минуты
+           int T = n/t;//часы
+           Console.WriteLine($"С начала суток прошло {N} секунд, {n} полных минут и {T} полных часа");
+           
+           
+            Console.WriteLine("\n");
+            Console.WriteLine("Задача 6");
+           int w = 7; //Дней в неделе
+           int K = 202; //день года
+           int D = K%w;//искомый день
+           Console.WriteLine($"Номер дня недели: {D}");
+        }
+    }
+}
